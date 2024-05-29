@@ -46,7 +46,7 @@ class TranslateFileCommand extends Command
 
         // dest
         $defaultDest = 'translation/' . pathinfo($src, PATHINFO_BASENAME);
-        $dest = $input->hasArgument(self::ARG_DEST) && !empty($input->getArgument(self::ARG_DEST))
+        $dest = !empty($input->getArgument(self::ARG_DEST))
             ? $input->getArgument(self::ARG_DEST)
             : $defaultDest;
 
